@@ -1,0 +1,23 @@
+\begin{theindex}
+
+  \item {Calculator}, \hyperpage{9}
+
+  \indexspace
+
+  \item {include/CalculatorPart2.h}, \hyperpage{11}
+  \item {include/MatrixPart3.h}, \hyperpage{12}
+  \item {include/PointStructurePart1.h}, \hyperpage{13}
+
+  \indexspace
+
+  \item {Matrix}
+    \subitem {matrix::Matrix$<$ T1 $>$}, \hyperpage{10}
+  \item {matrix}, \hyperpage{7}
+  \item {matrix::Matrix$<$ T1 $>$}, \hyperpage{9}
+    \subitem {Matrix}, \hyperpage{10}
+
+  \indexspace
+
+  \item {Point}, \hyperpage{10}
+
+\end{theindex}
