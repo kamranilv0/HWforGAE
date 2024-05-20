@@ -1,62 +1,521 @@
 \doxysection{matrix\+::Matrix\texorpdfstring{$<$}{<} T1 \texorpdfstring{$>$}{>} Class Template Reference}
 \hypertarget{classmatrix_1_1Matrix}{}\label{classmatrix_1_1Matrix}\index{matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}}
+
+
+\doxylink{classmatrix_1_1Matrix}{Matrix} class This class is used to create a matrix of type T1. The class has various functions to perform operations on the matrix. The class also has various operator overloads to perform operations on the matrix.  
+
+
+
+
+{\ttfamily \#include $<$Matrix\+Part3.\+h$>$}
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classmatrix_1_1Matrix_a410d08866303b587b6dc82a6593e742f}\label{classmatrix_1_1Matrix_a410d08866303b587b6dc82a6593e742f} 
-{\bfseries Matrix} (\mbox{\hyperlink{classmatrix_1_1Matrix}{const}} std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ $>$ \&\mbox{\hyperlink{classmatrix_1_1Matrix}{a}})
+\mbox{\hyperlink{classmatrix_1_1Matrix_a3c875b3e6a658217d8c533ee2ca48e7e}{Matrix}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor This constructor initializes the matrix with a single element of 0.\+0 with row and column size of 1. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix_1_1Matrix_a66933818edf4c713691e2b9fc072b34e}{Matrix}} (\mbox{\hyperlink{classmatrix_1_1Matrix}{const}} std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ $>$ \mbox{\hyperlink{classmatrix_1_1Matrix}{a}})
+\begin{DoxyCompactList}\small\item\em Constructor with vector of vector of type T1 This constructor initializes the matrix with a vector of vector of type T1. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix_1_1Matrix_a54f26de045f3f21954bc4cf0185d685e}{Matrix}} (\mbox{\hyperlink{classmatrix_1_1Matrix}{int}} \mbox{\hyperlink{classmatrix_1_1Matrix}{axis}}, \mbox{\hyperlink{classmatrix_1_1Matrix}{const}} std\+::vector$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \mbox{\hyperlink{classmatrix_1_1Matrix}{a}})
+\begin{DoxyCompactList}\small\item\em Constructor with vector of type T1 This constructor initializes the matrix with a vector of type T1. The axis parameter is used to determine the orientation of the matrix. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix_1_1Matrix_a3108c1460fd9526e5ffd75a61bd52c75}{Matrix}} (\mbox{\hyperlink{classmatrix_1_1Matrix}{int}} \mbox{\hyperlink{classmatrix_1_1Matrix}{size}}, \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} \mbox{\hyperlink{classmatrix_1_1Matrix}{val}}=0)
+\begin{DoxyCompactList}\small\item\em Constructor with size and value of type T1 This constructor initializes the matrix with a single element of type T1 with row and column size of size. Every element of the matrix is initialized with the value of val. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix_1_1Matrix_a361af8dfcd99ebd4b7c036ecf6de82ec}{Matrix}} (\mbox{\hyperlink{classmatrix_1_1Matrix}{const}} std\+::pair$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{int}}, \mbox{\hyperlink{classmatrix_1_1Matrix}{int}} $>$ \mbox{\hyperlink{classmatrix_1_1Matrix}{dimensions}}, \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} \mbox{\hyperlink{classmatrix_1_1Matrix}{val}}=0)
+\begin{DoxyCompactList}\small\item\em Constructor with pair of size and value of type T1 This constructor initializes the matrix with a single element of type T1 with row of dimensions.\+first and column of dimensions.\+second. Every element of the matrix is initialized with the value of val. \end{DoxyCompactList}\item 
+std\+::pair$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{int}}, \mbox{\hyperlink{classmatrix_1_1Matrix}{int}} $>$ \mbox{\hyperlink{classmatrix_1_1Matrix_ad48b174c959efe188fe8344e45eb2a8f}{get\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Function to get the size of the matrix. @params void. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix_1_1Matrix}{void}} \mbox{\hyperlink{classmatrix_1_1Matrix_a7d8fb4bb26285e20405b05bb34057f12}{print}} ()
+\begin{DoxyCompactList}\small\item\em Function to print the matrix. @params void. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix_1_1Matrix}{void}} \mbox{\hyperlink{classmatrix_1_1Matrix_a1642c616347f6de43706e94641fb7670}{set\+Data}} (\mbox{\hyperlink{classmatrix_1_1Matrix}{int}} \mbox{\hyperlink{classmatrix_1_1Matrix}{c}}, \mbox{\hyperlink{classmatrix_1_1Matrix}{int}} \mbox{\hyperlink{classmatrix_1_1Matrix}{r}}, \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} \mbox{\hyperlink{classmatrix_1_1Matrix}{val}})
+\begin{DoxyCompactList}\small\item\em Function to set the value of the matrix at a specific index. @params int i, int j, T1 val. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix_1_1Matrix}{const}} \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} \mbox{\hyperlink{classmatrix_1_1Matrix_a0d1f29e9d3dc7e69df539702e3c64067}{get\+Data}} (\mbox{\hyperlink{classmatrix_1_1Matrix}{int}} \mbox{\hyperlink{classmatrix_1_1Matrix}{c}}, \mbox{\hyperlink{classmatrix_1_1Matrix}{int}} \mbox{\hyperlink{classmatrix_1_1Matrix}{r}}) \mbox{\hyperlink{classmatrix_1_1Matrix}{const}}
+\begin{DoxyCompactList}\small\item\em Function to get the value of the matrix at a specific index. @params int i, int j. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} \mbox{\hyperlink{classmatrix_1_1Matrix_a0bfccc84c27a4d7ae2245b5922131e80}{determinant}} ()
+\begin{DoxyCompactList}\small\item\em Function to calculate the determinant of the matrix. @params void. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix_a29e33276229fafd9dccaecbaa0cbd03d}{transpose}} ()
+\begin{DoxyCompactList}\small\item\em Function to calculate the transpose of the matrix. @params void. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix_a77b540edb1a777b1132f24659037cef4}{inverse}} ()
+\begin{DoxyCompactList}\small\item\em Function to calculate the inverse of the matrix. @params void. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} \mbox{\hyperlink{classmatrix_1_1Matrix_a6034d358ce6aae16dda1007f1f330dbd}{trace}} ()
+\begin{DoxyCompactList}\small\item\em Function to calculate the trace of the matrix. @params void. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix_a5497bafb69acfa637a9091e94748b48c}{adjoint}} ()
+\begin{DoxyCompactList}\small\item\em Function to calculate the adjoint of the matrix. @params void. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix_a63bbdd1c77e549952de50a89d901dc53}{add}} (\mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} x)
+\begin{DoxyCompactList}\small\item\em Function to add a matrix to the current matrix. @params T1 x. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix_a5d43650002cbc60a1a16b03d634acd96}{subtract}} (\mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} x)
+\begin{DoxyCompactList}\small\item\em Function to subtract a matrix from the current matrix. @params T1 x. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix_a5021a645d2d56fb891e4342e2c7eae46}{neg}} ()
+\begin{DoxyCompactList}\small\item\em Function to convert matrix to negative of itself. @params void. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix_a3909e78ebfda12a8dfbc315f399d4329}{magnitude}} (\mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} x)
+\begin{DoxyCompactList}\small\item\em Function to calculate magnitude of the matrix. @params T1 x. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} \mbox{\hyperlink{classmatrix_1_1Matrix_ae10ec57e0383188ca3e90633d870e544}{dot}} (\mbox{\hyperlink{classmatrix_1_1Matrix}{const}} \mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \&\mbox{\hyperlink{classmatrix_1_1Matrix}{a}}) \mbox{\hyperlink{classmatrix_1_1Matrix}{const}}
+\begin{DoxyCompactList}\small\item\em Function to calculate the dot product of two matrices. @params \doxylink{classmatrix_1_1Matrix}{Matrix} a. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix_a9206badec04257bb22eb122fcb25394d}{multiply}} (\mbox{\hyperlink{classmatrix_1_1Matrix}{const}} \mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \&\mbox{\hyperlink{classmatrix_1_1Matrix}{a}}) \mbox{\hyperlink{classmatrix_1_1Matrix}{const}}
+\begin{DoxyCompactList}\small\item\em Function to calculate the cross product of two matrices. @params \doxylink{classmatrix_1_1Matrix}{Matrix} a. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classmatrix_1_1Matrix_a3056493b7e9381881c1c275d8dfb9861}{Matrix}} (\mbox{\hyperlink{classmatrix_1_1Matrix}{int}} \mbox{\hyperlink{classmatrix_1_1Matrix}{axis}}, \mbox{\hyperlink{classmatrix_1_1Matrix}{const}} std\+::vector$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \&\mbox{\hyperlink{classmatrix_1_1Matrix}{a}})
-\begin{DoxyCompactList}\small\item\em Adds two integers. \end{DoxyCompactList}\item 
-\Hypertarget{classmatrix_1_1Matrix_a3108c1460fd9526e5ffd75a61bd52c75}\label{classmatrix_1_1Matrix_a3108c1460fd9526e5ffd75a61bd52c75} 
-{\bfseries Matrix} (\mbox{\hyperlink{classmatrix_1_1Matrix}{int}} \mbox{\hyperlink{classmatrix_1_1Matrix}{size}}, \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} \mbox{\hyperlink{classmatrix_1_1Matrix}{val}}=0)
-\item 
-\Hypertarget{classmatrix_1_1Matrix_a398075c03337102f73931ab27546bd16}\label{classmatrix_1_1Matrix_a398075c03337102f73931ab27546bd16} 
-{\bfseries Matrix} (std\+::pair$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{int}}, \mbox{\hyperlink{classmatrix_1_1Matrix}{int}} $>$ \mbox{\hyperlink{classmatrix_1_1Matrix}{dimensions}}, \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} \mbox{\hyperlink{classmatrix_1_1Matrix}{val}}=0)
-\item 
-\Hypertarget{classmatrix_1_1Matrix_ad48b174c959efe188fe8344e45eb2a8f}\label{classmatrix_1_1Matrix_ad48b174c959efe188fe8344e45eb2a8f} 
-std\+::pair$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{int}}, \mbox{\hyperlink{classmatrix_1_1Matrix}{int}} $>$ {\bfseries get\+Size} ()
-\item 
-\Hypertarget{classmatrix_1_1Matrix_a7d8fb4bb26285e20405b05bb34057f12}\label{classmatrix_1_1Matrix_a7d8fb4bb26285e20405b05bb34057f12} 
-\mbox{\hyperlink{classmatrix_1_1Matrix}{void}} {\bfseries print} ()
-\item 
-\Hypertarget{classmatrix_1_1Matrix_a0bfccc84c27a4d7ae2245b5922131e80}\label{classmatrix_1_1Matrix_a0bfccc84c27a4d7ae2245b5922131e80} 
-\mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} {\bfseries determinant} ()
-\item 
-\Hypertarget{classmatrix_1_1Matrix_a1642c616347f6de43706e94641fb7670}\label{classmatrix_1_1Matrix_a1642c616347f6de43706e94641fb7670} 
-\mbox{\hyperlink{classmatrix_1_1Matrix}{void}} {\bfseries set\+Data} (\mbox{\hyperlink{classmatrix_1_1Matrix}{int}} \mbox{\hyperlink{classmatrix_1_1Matrix}{c}}, \mbox{\hyperlink{classmatrix_1_1Matrix}{int}} \mbox{\hyperlink{classmatrix_1_1Matrix}{r}}, \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} \mbox{\hyperlink{classmatrix_1_1Matrix}{val}})
-\item 
-\Hypertarget{classmatrix_1_1Matrix_a29e33276229fafd9dccaecbaa0cbd03d}\label{classmatrix_1_1Matrix_a29e33276229fafd9dccaecbaa0cbd03d} 
-\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} {\bfseries transpose} ()
-\item 
-\Hypertarget{classmatrix_1_1Matrix_a77b540edb1a777b1132f24659037cef4}\label{classmatrix_1_1Matrix_a77b540edb1a777b1132f24659037cef4} 
-\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} {\bfseries inverse} ()
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix_aad0602e738d45a362d105e1098e02bfe}{operator+}} (\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix}{const}} \&\mbox{\hyperlink{classmatrix_1_1Matrix}{c1}}, \mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix}{const}} \&\mbox{\hyperlink{classmatrix_1_1Matrix}{c2}})
+\begin{DoxyCompactList}\small\item\em Function to calculate addition of two matrices.(pairwise addition Example\+: Matrix$<$double$>$ matrix(\{1,2,3\},\{4,5,6\},\{7,8,9\}); Matrix$<$double$>$ matrix2(\{1,2,3\},\{4,5,6\},\{7,8,9\}); (matrix+matrix2).\doxylink{classmatrix_1_1Matrix_a7d8fb4bb26285e20405b05bb34057f12}{print()}; 2 4 6 8 10 12 14 16 18 @params \doxylink{classmatrix_1_1Matrix}{Matrix} c1, \doxylink{classmatrix_1_1Matrix}{Matrix} c2. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix_a26d816c940f7e00febb834140edd6d0b}{operator-\/}} (\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix}{const}} \&\mbox{\hyperlink{classmatrix_1_1Matrix}{c1}}, \mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix}{const}} \&\mbox{\hyperlink{classmatrix_1_1Matrix}{c2}})
+\begin{DoxyCompactList}\small\item\em Function to calculate subtraction of two matrices.(pairwise subtraction) Example\+: Matrix$<$double$>$ matrix(\{1,2,3\},\{4,5,6\},\{7,8,9\}); Matrix$<$double$>$ matrix2(\{1,2,3\},\{4,5,6\},\{7,8,9\}); (matrix-\/matrix2).\doxylink{classmatrix_1_1Matrix_a7d8fb4bb26285e20405b05bb34057f12}{print()}; 0 0 0 0 0 0 0 0 0 @params \doxylink{classmatrix_1_1Matrix}{Matrix} c1, \doxylink{classmatrix_1_1Matrix}{Matrix} c2. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix_a2c9fe2d75f5aacfba89fa80662fe3540}{operator\texorpdfstring{$\ast$}{*}}} (\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix}{const}} \&\mbox{\hyperlink{classmatrix_1_1Matrix}{c1}}, \mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix}{const}} \&\mbox{\hyperlink{classmatrix_1_1Matrix}{c2}})
+\begin{DoxyCompactList}\small\item\em Function to calculate multiplication of two matrices.(pairwise multiplication) Example\+: Matrix$<$double$>$ matrix(\{1,2,3\},\{4,5,6\},\{7,8,9\}); Matrix$<$double$>$ matrix2(\{1,2,3\},\{4,5,6\},\{7,8,9\}); (matrix\texorpdfstring{$\ast$}{*}matrix2).\doxylink{classmatrix_1_1Matrix_a7d8fb4bb26285e20405b05bb34057f12}{print()}; 1 4 9 16 25 36 49 64 81 @params \doxylink{classmatrix_1_1Matrix}{Matrix} c1, \doxylink{classmatrix_1_1Matrix}{Matrix} c2. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix_a8859c6c75cb400d35b2f07a95bca20f5}{operator/}} (\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix}{const}} \&\mbox{\hyperlink{classmatrix_1_1Matrix}{c1}}, \mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix}{const}} \&\mbox{\hyperlink{classmatrix_1_1Matrix}{c2}})
+\begin{DoxyCompactList}\small\item\em Function to calculate division of two matrices.(pairwise division) Example\+: Matrix$<$double$>$ matrix(\{1,2,3\},\{4,5,6\},\{7,8,9\}); Matrix$<$double$>$ matrix2(\{1,2,3\},\{4,5,6\},\{7,8,9\}); (matrix/matrix2).\doxylink{classmatrix_1_1Matrix_a7d8fb4bb26285e20405b05bb34057f12}{print()}; 1 1 1 1 1 1 1 1 1 @params \doxylink{classmatrix_1_1Matrix}{Matrix} c1, \doxylink{classmatrix_1_1Matrix}{Matrix} c2. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix_af14341fc8bee070e3449980cb0d45532}{operator+}} (\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix}{const}} \&\mbox{\hyperlink{classmatrix_1_1Matrix}{c1}}, \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} y)
+\begin{DoxyCompactList}\small\item\em Function to calculate addition of a matrix and a number. Example\+: Matrix$<$double$>$ matrix(\{1,2,3\},\{4,5,6\},\{7,8,9\}); (matrix+2).\doxylink{classmatrix_1_1Matrix_a7d8fb4bb26285e20405b05bb34057f12}{print()}; 3 4 5 6 7 8 9 10 11 @params \doxylink{classmatrix_1_1Matrix}{Matrix} c1, T1 y. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix_a46018bc6f6524896aa4e18989b6b8e57}{operator-\/}} (\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix}{const}} \&\mbox{\hyperlink{classmatrix_1_1Matrix}{c1}}, \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} y)
+\begin{DoxyCompactList}\small\item\em Function to calculate subtraction of a matrix and a number. Example\+: Matrix$<$double$>$ matrix(\{1,2,3\},\{4,5,6\},\{7,8,9\}); (matrix-\/2).\doxylink{classmatrix_1_1Matrix_a7d8fb4bb26285e20405b05bb34057f12}{print()}; -\/1 0 1 2 3 4 5 6 7 @params \doxylink{classmatrix_1_1Matrix}{Matrix} c1, T1 y. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix_a37d965f6760e6742445370d14d0cf259}{operator\texorpdfstring{$\ast$}{*}}} (\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix}{const}} \&\mbox{\hyperlink{classmatrix_1_1Matrix}{c1}}, \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} y)
+\begin{DoxyCompactList}\small\item\em Function to calculate multiplication of a matrix and a number. Example\+: Matrix$<$double$>$ matrix(\{1,2,3\},\{4,5,6\},\{7,8,9\}); (matrix\texorpdfstring{$\ast$}{*}2).\doxylink{classmatrix_1_1Matrix_a7d8fb4bb26285e20405b05bb34057f12}{print()}; 2 4 6 8 10 12 14 16 18 @params \doxylink{classmatrix_1_1Matrix}{Matrix} c1, T1 y. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix_ac1e12d5e98bc93b46f0bd456a389a5c2}{operator/}} (\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix}{const}} \&\mbox{\hyperlink{classmatrix_1_1Matrix}{c1}}, \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} y)
+\begin{DoxyCompactList}\small\item\em Function to calculate division of a matrix and a number. Example\+: Matrix$<$double$>$ matrix(\{1,2,3\},\{4,5,6\},\{7,8,9\}); (matrix/2).\doxylink{classmatrix_1_1Matrix_a7d8fb4bb26285e20405b05bb34057f12}{print()}; 0.\+5 1 1.\+5 2 2.\+5 3 3.\+5 4 4.\+5 @params \doxylink{classmatrix_1_1Matrix}{Matrix} c1, T1 y. \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{classmatrix_1_1Matrix_a7844e665795716b3edc7c79902c96f4f}{operator$<$$<$}} (std\+::ostream \&\mbox{\hyperlink{classmatrix_1_1Matrix}{os}}, \mbox{\hyperlink{classmatrix_1_1Matrix}{const}} \mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \&\mbox{\hyperlink{classmatrix_1_1Matrix}{obj}})
+\begin{DoxyCompactList}\small\item\em Operator overloading for ostream \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} operator. Example\+: Matrix$<$int$>$ matrix(\{1,2,3\},\{4,5,6\},\{7,8,9\}); std\+::cout\texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}matrix; \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}--- this part 1 2 3 4 5 6 7 8 9 @params ostream os, \doxylink{classmatrix_1_1Matrix}{Matrix} obj. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$\mbox{\hyperlink{classmatrix_1_1Matrix_a3c875b3e6a658217d8c533ee2ca48e7e}{typename}} \mbox{\hyperlink{classmatrix_1_1Matrix_a3c875b3e6a658217d8c533ee2ca48e7e}{T1}}$>$\newline
+class matrix\+::\+Matrix$<$ T1 $>$}
+\doxylink{classmatrix_1_1Matrix}{Matrix} class This class is used to create a matrix of type T1. The class has various functions to perform operations on the matrix. The class also has various operator overloads to perform operations on the matrix. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classmatrix_1_1Matrix_a3056493b7e9381881c1c275d8dfb9861}\label{classmatrix_1_1Matrix_a3056493b7e9381881c1c275d8dfb9861} 
+\Hypertarget{classmatrix_1_1Matrix_a3c875b3e6a658217d8c533ee2ca48e7e}\label{classmatrix_1_1Matrix_a3c875b3e6a658217d8c533ee2ca48e7e} 
 \index{matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}!Matrix@{Matrix}}
 \index{Matrix@{Matrix}!matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}}
-\doxysubsubsection{\texorpdfstring{Matrix()}{Matrix()}}
+\doxysubsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
 {\footnotesize\ttfamily template$<$\mbox{\hyperlink{classmatrix_1_1Matrix}{typename}} \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \\
-\mbox{\hyperlink{classmatrix_1_1Matrix}{matrix\+::\+Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$\+::\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{int}}}]{axis,  }\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{const}} std\+::vector$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{classmatrix_1_1Matrix}{matrix\+::\+Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$\+::\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Adds two integers. 
+Default constructor This constructor initializes the matrix with a single element of 0.\+0 with row and column size of 1. 
 
-This function takes two integers and returns their sum.
+\begin{DoxyReturn}{Returns}
+\doxylink{classmatrix_1_1Matrix}{Matrix} 
+\end{DoxyReturn}
+\Hypertarget{classmatrix_1_1Matrix_a66933818edf4c713691e2b9fc072b34e}\label{classmatrix_1_1Matrix_a66933818edf4c713691e2b9fc072b34e} 
+\index{matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classmatrix_1_1Matrix}{typename}} \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \\
+\mbox{\hyperlink{classmatrix_1_1Matrix}{matrix\+::\+Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$\+::\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{const}} std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ $>$}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor with vector of vector of type T1 This constructor initializes the matrix with a vector of vector of type T1. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em a} & The first integer. \\
-\hline
-{\em b} & The second integer. \\
+{\em a} & vector of vector of type T1 \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-The sum of a and b. 
+\doxylink{classmatrix_1_1Matrix}{Matrix} 
+\end{DoxyReturn}
+\Hypertarget{classmatrix_1_1Matrix_a54f26de045f3f21954bc4cf0185d685e}\label{classmatrix_1_1Matrix_a54f26de045f3f21954bc4cf0185d685e} 
+\index{matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classmatrix_1_1Matrix}{typename}} \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \\
+\mbox{\hyperlink{classmatrix_1_1Matrix}{matrix\+::\+Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$\+::\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{int}}}]{axis,  }\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{const}} std\+::vector$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor with vector of type T1 This constructor initializes the matrix with a vector of type T1. The axis parameter is used to determine the orientation of the matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & vector of type T1 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classmatrix_1_1Matrix}{Matrix} 
+\end{DoxyReturn}
+\Hypertarget{classmatrix_1_1Matrix_a3108c1460fd9526e5ffd75a61bd52c75}\label{classmatrix_1_1Matrix_a3108c1460fd9526e5ffd75a61bd52c75} 
+\index{matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classmatrix_1_1Matrix}{typename}} \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \\
+\mbox{\hyperlink{classmatrix_1_1Matrix}{matrix\+::\+Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$\+::\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{int}}}]{size,  }\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{T1}}}]{val = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor with size and value of type T1 This constructor initializes the matrix with a single element of type T1 with row and column size of size. Every element of the matrix is initialized with the value of val. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & size of the matrix \\
+\hline
+{\em val} & value of type T1 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classmatrix_1_1Matrix}{Matrix} 
+\end{DoxyReturn}
+\Hypertarget{classmatrix_1_1Matrix_a361af8dfcd99ebd4b7c036ecf6de82ec}\label{classmatrix_1_1Matrix_a361af8dfcd99ebd4b7c036ecf6de82ec} 
+\index{matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classmatrix_1_1Matrix}{typename}} \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \\
+\mbox{\hyperlink{classmatrix_1_1Matrix}{matrix\+::\+Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$\+::\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{const}} std\+::pair$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{int}}, \mbox{\hyperlink{classmatrix_1_1Matrix}{int}} $>$}]{dimensions,  }\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{T1}}}]{val = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor with pair of size and value of type T1 This constructor initializes the matrix with a single element of type T1 with row of dimensions.\+first and column of dimensions.\+second. Every element of the matrix is initialized with the value of val. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dimensions} & pair of size of the matrix \\
+\hline
+{\em val} & value of type T1 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classmatrix_1_1Matrix}{Matrix} 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmatrix_1_1Matrix_a63bbdd1c77e549952de50a89d901dc53}\label{classmatrix_1_1Matrix_a63bbdd1c77e549952de50a89d901dc53} 
+\index{matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}!add@{add}}
+\index{add@{add}!matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classmatrix_1_1Matrix}{typename}} \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \\
+\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix}{matrix\+::\+Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{T1}}}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to add a matrix to the current matrix. @params T1 x. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classmatrix_1_1Matrix}{Matrix} 
+\end{DoxyReturn}
+\Hypertarget{classmatrix_1_1Matrix_a5497bafb69acfa637a9091e94748b48c}\label{classmatrix_1_1Matrix_a5497bafb69acfa637a9091e94748b48c} 
+\index{matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}!adjoint@{adjoint}}
+\index{adjoint@{adjoint}!matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}}
+\doxysubsubsection{\texorpdfstring{adjoint()}{adjoint()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classmatrix_1_1Matrix}{typename}} \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \\
+\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix}{matrix\+::\+Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$\+::adjoint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to calculate the adjoint of the matrix. @params void. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classmatrix_1_1Matrix}{Matrix} 
+\end{DoxyReturn}
+\Hypertarget{classmatrix_1_1Matrix_a0bfccc84c27a4d7ae2245b5922131e80}\label{classmatrix_1_1Matrix_a0bfccc84c27a4d7ae2245b5922131e80} 
+\index{matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}!determinant@{determinant}}
+\index{determinant@{determinant}!matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}}
+\doxysubsubsection{\texorpdfstring{determinant()}{determinant()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classmatrix_1_1Matrix}{typename}} \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \\
+\mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} \mbox{\hyperlink{classmatrix_1_1Matrix}{matrix\+::\+Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$\+::determinant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to calculate the determinant of the matrix. @params void. 
+
+\begin{DoxyReturn}{Returns}
+T1 
+\end{DoxyReturn}
+\Hypertarget{classmatrix_1_1Matrix_ae10ec57e0383188ca3e90633d870e544}\label{classmatrix_1_1Matrix_ae10ec57e0383188ca3e90633d870e544} 
+\index{matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}!dot@{dot}}
+\index{dot@{dot}!matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}}
+\doxysubsubsection{\texorpdfstring{dot()}{dot()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classmatrix_1_1Matrix}{typename}} \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \\
+\mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} \mbox{\hyperlink{classmatrix_1_1Matrix}{matrix\+::\+Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$\+::dot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{const}} \mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \&}]{a }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to calculate the dot product of two matrices. @params \doxylink{classmatrix_1_1Matrix}{Matrix} a. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classmatrix_1_1Matrix}{Matrix} 
+\end{DoxyReturn}
+\Hypertarget{classmatrix_1_1Matrix_a0d1f29e9d3dc7e69df539702e3c64067}\label{classmatrix_1_1Matrix_a0d1f29e9d3dc7e69df539702e3c64067} 
+\index{matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}!getData@{getData}}
+\index{getData@{getData}!matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classmatrix_1_1Matrix}{typename}} \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \\
+\mbox{\hyperlink{classmatrix_1_1Matrix}{const}} \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} \mbox{\hyperlink{classmatrix_1_1Matrix}{matrix\+::\+Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$\+::get\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{int}}}]{c,  }\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{int}}}]{r }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to get the value of the matrix at a specific index. @params int i, int j. 
+
+\begin{DoxyReturn}{Returns}
+T1 
+\end{DoxyReturn}
+\Hypertarget{classmatrix_1_1Matrix_ad48b174c959efe188fe8344e45eb2a8f}\label{classmatrix_1_1Matrix_ad48b174c959efe188fe8344e45eb2a8f} 
+\index{matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}!getSize@{getSize}}
+\index{getSize@{getSize}!matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classmatrix_1_1Matrix}{typename}} \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \\
+std\+::pair$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{int}}, \mbox{\hyperlink{classmatrix_1_1Matrix}{int}} $>$ \mbox{\hyperlink{classmatrix_1_1Matrix}{matrix\+::\+Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to get the size of the matrix. @params void. 
+
+\begin{DoxyReturn}{Returns}
+pair of int 
+\end{DoxyReturn}
+\Hypertarget{classmatrix_1_1Matrix_a77b540edb1a777b1132f24659037cef4}\label{classmatrix_1_1Matrix_a77b540edb1a777b1132f24659037cef4} 
+\index{matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}!inverse@{inverse}}
+\index{inverse@{inverse}!matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}}
+\doxysubsubsection{\texorpdfstring{inverse()}{inverse()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classmatrix_1_1Matrix}{typename}} \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \\
+\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix}{matrix\+::\+Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$\+::inverse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to calculate the inverse of the matrix. @params void. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classmatrix_1_1Matrix}{Matrix} 
+\end{DoxyReturn}
+\Hypertarget{classmatrix_1_1Matrix_a3909e78ebfda12a8dfbc315f399d4329}\label{classmatrix_1_1Matrix_a3909e78ebfda12a8dfbc315f399d4329} 
+\index{matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}!magnitude@{magnitude}}
+\index{magnitude@{magnitude}!matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}}
+\doxysubsubsection{\texorpdfstring{magnitude()}{magnitude()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classmatrix_1_1Matrix}{typename}} \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \\
+\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix}{matrix\+::\+Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$\+::magnitude (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{T1}}}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to calculate magnitude of the matrix. @params T1 x. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classmatrix_1_1Matrix}{Matrix} 
+\end{DoxyReturn}
+\Hypertarget{classmatrix_1_1Matrix_a9206badec04257bb22eb122fcb25394d}\label{classmatrix_1_1Matrix_a9206badec04257bb22eb122fcb25394d} 
+\index{matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}!multiply@{multiply}}
+\index{multiply@{multiply}!matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}}
+\doxysubsubsection{\texorpdfstring{multiply()}{multiply()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classmatrix_1_1Matrix}{typename}} \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \\
+\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix}{matrix\+::\+Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$\+::multiply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{const}} \mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \&}]{a }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to calculate the cross product of two matrices. @params \doxylink{classmatrix_1_1Matrix}{Matrix} a. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classmatrix_1_1Matrix}{Matrix} 
+\end{DoxyReturn}
+\Hypertarget{classmatrix_1_1Matrix_a5021a645d2d56fb891e4342e2c7eae46}\label{classmatrix_1_1Matrix_a5021a645d2d56fb891e4342e2c7eae46} 
+\index{matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}!neg@{neg}}
+\index{neg@{neg}!matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}}
+\doxysubsubsection{\texorpdfstring{neg()}{neg()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classmatrix_1_1Matrix}{typename}} \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \\
+\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix}{matrix\+::\+Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$\+::neg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to convert matrix to negative of itself. @params void. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classmatrix_1_1Matrix}{Matrix} 
+\end{DoxyReturn}
+\Hypertarget{classmatrix_1_1Matrix_a7d8fb4bb26285e20405b05bb34057f12}\label{classmatrix_1_1Matrix_a7d8fb4bb26285e20405b05bb34057f12} 
+\index{matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}!print@{print}}
+\index{print@{print}!matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classmatrix_1_1Matrix}{typename}} \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \\
+\mbox{\hyperlink{classmatrix_1_1Matrix}{void}} \mbox{\hyperlink{classmatrix_1_1Matrix}{matrix\+::\+Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to print the matrix. @params void. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{classmatrix_1_1Matrix_a1642c616347f6de43706e94641fb7670}\label{classmatrix_1_1Matrix_a1642c616347f6de43706e94641fb7670} 
+\index{matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}!setData@{setData}}
+\index{setData@{setData}!matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classmatrix_1_1Matrix}{typename}} \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \\
+\mbox{\hyperlink{classmatrix_1_1Matrix}{void}} \mbox{\hyperlink{classmatrix_1_1Matrix}{matrix\+::\+Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$\+::set\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{int}}}]{c,  }\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{int}}}]{r,  }\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{T1}}}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to set the value of the matrix at a specific index. @params int i, int j, T1 val. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{classmatrix_1_1Matrix_a5d43650002cbc60a1a16b03d634acd96}\label{classmatrix_1_1Matrix_a5d43650002cbc60a1a16b03d634acd96} 
+\index{matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}!subtract@{subtract}}
+\index{subtract@{subtract}!matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}}
+\doxysubsubsection{\texorpdfstring{subtract()}{subtract()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classmatrix_1_1Matrix}{typename}} \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \\
+\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix}{matrix\+::\+Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$\+::subtract (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{T1}}}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to subtract a matrix from the current matrix. @params T1 x. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classmatrix_1_1Matrix}{Matrix} 
+\end{DoxyReturn}
+\Hypertarget{classmatrix_1_1Matrix_a6034d358ce6aae16dda1007f1f330dbd}\label{classmatrix_1_1Matrix_a6034d358ce6aae16dda1007f1f330dbd} 
+\index{matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}!trace@{trace}}
+\index{trace@{trace}!matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}}
+\doxysubsubsection{\texorpdfstring{trace()}{trace()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classmatrix_1_1Matrix}{typename}} \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \\
+\mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} \mbox{\hyperlink{classmatrix_1_1Matrix}{matrix\+::\+Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$\+::trace (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to calculate the trace of the matrix. @params void. 
+
+\begin{DoxyReturn}{Returns}
+T1 
+\end{DoxyReturn}
+\Hypertarget{classmatrix_1_1Matrix_a29e33276229fafd9dccaecbaa0cbd03d}\label{classmatrix_1_1Matrix_a29e33276229fafd9dccaecbaa0cbd03d} 
+\index{matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}!transpose@{transpose}}
+\index{transpose@{transpose}!matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}}
+\doxysubsubsection{\texorpdfstring{transpose()}{transpose()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classmatrix_1_1Matrix}{typename}} \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \\
+\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix}{matrix\+::\+Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$\+::transpose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to calculate the transpose of the matrix. @params void. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classmatrix_1_1Matrix}{Matrix} 
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{classmatrix_1_1Matrix_a2c9fe2d75f5aacfba89fa80662fe3540}\label{classmatrix_1_1Matrix_a2c9fe2d75f5aacfba89fa80662fe3540} 
+\index{matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}}{operator*}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classmatrix_1_1Matrix}{typename}} \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \\
+\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix}{operator}}\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \mbox{\hyperlink{classmatrix_1_1Matrix}{const}} \&}]{c1,  }\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \mbox{\hyperlink{classmatrix_1_1Matrix}{const}} \&}]{c2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Function to calculate multiplication of two matrices.(pairwise multiplication) Example\+: Matrix$<$double$>$ matrix(\{1,2,3\},\{4,5,6\},\{7,8,9\}); Matrix$<$double$>$ matrix2(\{1,2,3\},\{4,5,6\},\{7,8,9\}); (matrix\texorpdfstring{$\ast$}{*}matrix2).\doxylink{classmatrix_1_1Matrix_a7d8fb4bb26285e20405b05bb34057f12}{print()}; 1 4 9 16 25 36 49 64 81 @params \doxylink{classmatrix_1_1Matrix}{Matrix} c1, \doxylink{classmatrix_1_1Matrix}{Matrix} c2. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classmatrix_1_1Matrix}{Matrix} 
+\end{DoxyReturn}
+\Hypertarget{classmatrix_1_1Matrix_a37d965f6760e6742445370d14d0cf259}\label{classmatrix_1_1Matrix_a37d965f6760e6742445370d14d0cf259} 
+\index{matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}}{operator*}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classmatrix_1_1Matrix}{typename}} \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \\
+\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix}{operator}}\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \mbox{\hyperlink{classmatrix_1_1Matrix}{const}} \&}]{c1,  }\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{T1}}}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Function to calculate multiplication of a matrix and a number. Example\+: Matrix$<$double$>$ matrix(\{1,2,3\},\{4,5,6\},\{7,8,9\}); (matrix\texorpdfstring{$\ast$}{*}2).\doxylink{classmatrix_1_1Matrix_a7d8fb4bb26285e20405b05bb34057f12}{print()}; 2 4 6 8 10 12 14 16 18 @params \doxylink{classmatrix_1_1Matrix}{Matrix} c1, T1 y. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classmatrix_1_1Matrix}{Matrix} 
+\end{DoxyReturn}
+\Hypertarget{classmatrix_1_1Matrix_aad0602e738d45a362d105e1098e02bfe}\label{classmatrix_1_1Matrix_aad0602e738d45a362d105e1098e02bfe} 
+\index{matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}}
+\doxysubsubsection{\texorpdfstring{operator+}{operator+}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classmatrix_1_1Matrix}{typename}} \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \\
+\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix}{operator}}+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \mbox{\hyperlink{classmatrix_1_1Matrix}{const}} \&}]{c1,  }\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \mbox{\hyperlink{classmatrix_1_1Matrix}{const}} \&}]{c2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Function to calculate addition of two matrices.(pairwise addition Example\+: Matrix$<$double$>$ matrix(\{1,2,3\},\{4,5,6\},\{7,8,9\}); Matrix$<$double$>$ matrix2(\{1,2,3\},\{4,5,6\},\{7,8,9\}); (matrix+matrix2).\doxylink{classmatrix_1_1Matrix_a7d8fb4bb26285e20405b05bb34057f12}{print()}; 2 4 6 8 10 12 14 16 18 @params \doxylink{classmatrix_1_1Matrix}{Matrix} c1, \doxylink{classmatrix_1_1Matrix}{Matrix} c2. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classmatrix_1_1Matrix}{Matrix} 
+\end{DoxyReturn}
+\Hypertarget{classmatrix_1_1Matrix_af14341fc8bee070e3449980cb0d45532}\label{classmatrix_1_1Matrix_af14341fc8bee070e3449980cb0d45532} 
+\index{matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}}
+\doxysubsubsection{\texorpdfstring{operator+}{operator+}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classmatrix_1_1Matrix}{typename}} \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \\
+\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix}{operator}}+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \mbox{\hyperlink{classmatrix_1_1Matrix}{const}} \&}]{c1,  }\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{T1}}}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Function to calculate addition of a matrix and a number. Example\+: Matrix$<$double$>$ matrix(\{1,2,3\},\{4,5,6\},\{7,8,9\}); (matrix+2).\doxylink{classmatrix_1_1Matrix_a7d8fb4bb26285e20405b05bb34057f12}{print()}; 3 4 5 6 7 8 9 10 11 @params \doxylink{classmatrix_1_1Matrix}{Matrix} c1, T1 y. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classmatrix_1_1Matrix}{Matrix} 
+\end{DoxyReturn}
+\Hypertarget{classmatrix_1_1Matrix_a26d816c940f7e00febb834140edd6d0b}\label{classmatrix_1_1Matrix_a26d816c940f7e00febb834140edd6d0b} 
+\index{matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/}{operator-}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classmatrix_1_1Matrix}{typename}} \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \\
+\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix}{operator}}-\/ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \mbox{\hyperlink{classmatrix_1_1Matrix}{const}} \&}]{c1,  }\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \mbox{\hyperlink{classmatrix_1_1Matrix}{const}} \&}]{c2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Function to calculate subtraction of two matrices.(pairwise subtraction) Example\+: Matrix$<$double$>$ matrix(\{1,2,3\},\{4,5,6\},\{7,8,9\}); Matrix$<$double$>$ matrix2(\{1,2,3\},\{4,5,6\},\{7,8,9\}); (matrix-\/matrix2).\doxylink{classmatrix_1_1Matrix_a7d8fb4bb26285e20405b05bb34057f12}{print()}; 0 0 0 0 0 0 0 0 0 @params \doxylink{classmatrix_1_1Matrix}{Matrix} c1, \doxylink{classmatrix_1_1Matrix}{Matrix} c2. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classmatrix_1_1Matrix}{Matrix} 
+\end{DoxyReturn}
+\Hypertarget{classmatrix_1_1Matrix_a46018bc6f6524896aa4e18989b6b8e57}\label{classmatrix_1_1Matrix_a46018bc6f6524896aa4e18989b6b8e57} 
+\index{matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/}{operator-}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classmatrix_1_1Matrix}{typename}} \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \\
+\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix}{operator}}-\/ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \mbox{\hyperlink{classmatrix_1_1Matrix}{const}} \&}]{c1,  }\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{T1}}}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Function to calculate subtraction of a matrix and a number. Example\+: Matrix$<$double$>$ matrix(\{1,2,3\},\{4,5,6\},\{7,8,9\}); (matrix-\/2).\doxylink{classmatrix_1_1Matrix_a7d8fb4bb26285e20405b05bb34057f12}{print()}; -\/1 0 1 2 3 4 5 6 7 @params \doxylink{classmatrix_1_1Matrix}{Matrix} c1, T1 y. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classmatrix_1_1Matrix}{Matrix} 
+\end{DoxyReturn}
+\Hypertarget{classmatrix_1_1Matrix_a8859c6c75cb400d35b2f07a95bca20f5}\label{classmatrix_1_1Matrix_a8859c6c75cb400d35b2f07a95bca20f5} 
+\index{matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}!operator/@{operator/}}
+\index{operator/@{operator/}!matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}}
+\doxysubsubsection{\texorpdfstring{operator/}{operator/}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classmatrix_1_1Matrix}{typename}} \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \\
+\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix}{operator}}/ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \mbox{\hyperlink{classmatrix_1_1Matrix}{const}} \&}]{c1,  }\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \mbox{\hyperlink{classmatrix_1_1Matrix}{const}} \&}]{c2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Function to calculate division of two matrices.(pairwise division) Example\+: Matrix$<$double$>$ matrix(\{1,2,3\},\{4,5,6\},\{7,8,9\}); Matrix$<$double$>$ matrix2(\{1,2,3\},\{4,5,6\},\{7,8,9\}); (matrix/matrix2).\doxylink{classmatrix_1_1Matrix_a7d8fb4bb26285e20405b05bb34057f12}{print()}; 1 1 1 1 1 1 1 1 1 @params \doxylink{classmatrix_1_1Matrix}{Matrix} c1, \doxylink{classmatrix_1_1Matrix}{Matrix} c2. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classmatrix_1_1Matrix}{Matrix} 
+\end{DoxyReturn}
+\Hypertarget{classmatrix_1_1Matrix_ac1e12d5e98bc93b46f0bd456a389a5c2}\label{classmatrix_1_1Matrix_ac1e12d5e98bc93b46f0bd456a389a5c2} 
+\index{matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}!operator/@{operator/}}
+\index{operator/@{operator/}!matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}}
+\doxysubsubsection{\texorpdfstring{operator/}{operator/}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classmatrix_1_1Matrix}{typename}} \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \\
+\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}} \mbox{\hyperlink{classmatrix_1_1Matrix}{operator}}/ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \mbox{\hyperlink{classmatrix_1_1Matrix}{const}} \&}]{c1,  }\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{T1}}}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Function to calculate division of a matrix and a number. Example\+: Matrix$<$double$>$ matrix(\{1,2,3\},\{4,5,6\},\{7,8,9\}); (matrix/2).\doxylink{classmatrix_1_1Matrix_a7d8fb4bb26285e20405b05bb34057f12}{print()}; 0.\+5 1 1.\+5 2 2.\+5 3 3.\+5 4 4.\+5 @params \doxylink{classmatrix_1_1Matrix}{Matrix} c1, T1 y. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classmatrix_1_1Matrix}{Matrix} 
+\end{DoxyReturn}
+\Hypertarget{classmatrix_1_1Matrix_a7844e665795716b3edc7c79902c96f4f}\label{classmatrix_1_1Matrix_a7844e665795716b3edc7c79902c96f4f} 
+\index{matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!matrix::Matrix$<$ T1 $>$@{matrix::Matrix$<$ T1 $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classmatrix_1_1Matrix}{typename}} \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \\
+std\+::ostream \& \mbox{\hyperlink{classmatrix_1_1Matrix}{operator}}$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{\mbox{\hyperlink{classmatrix_1_1Matrix}{const}} \mbox{\hyperlink{classmatrix_1_1Matrix}{Matrix}}$<$ \mbox{\hyperlink{classmatrix_1_1Matrix}{T1}} $>$ \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Operator overloading for ostream \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} operator. Example\+: Matrix$<$int$>$ matrix(\{1,2,3\},\{4,5,6\},\{7,8,9\}); std\+::cout\texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}matrix; \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}--- this part 1 2 3 4 5 6 7 8 9 @params ostream os, \doxylink{classmatrix_1_1Matrix}{Matrix} obj. 
+
+\begin{DoxyReturn}{Returns}
+ostream 
 \end{DoxyReturn}
 
 

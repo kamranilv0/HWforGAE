@@ -6,6 +6,7 @@
 
 int main() {
 
+
     // ----------------  P1: Point structure starts  ---------------------
 //#define POINT
 #ifdef POINT
@@ -145,13 +146,18 @@ int main() {
 
 
     // ----------------  P3: Matrix Class  ---------------------
-//#define MATRIX
+#define MATRIX
 #ifdef MATRIX
+
 
     std::cout<<"\n\n\nPart 3: Matrix \n\n\n";
 
+    std::cout<<matrix::identity(4);
+
     matrix::Matrix<double> d({{1,1,1},{2,4,3}});
     matrix::Matrix<double> e({{1,2,3},{3,4,5}});
+
+    std::cout<<matrix::identity(6);
 
     std::cout<<d.dot(e)<<std::endl;
 
@@ -163,16 +169,12 @@ int main() {
     a.neg().print();
     a.neg();
 
-    a.identity().print();
-
     a.transpose().print();
 
     std::cout<<a.trace()<<std::endl;
 
-
-
-
-
 #endif
+
+
     return 0;
 }
